@@ -1,0 +1,58 @@
+\documentclass[UTF8,a5paper,zihao=-4,titlepage,oneside]{ctexbook}
+
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{import}
+\usepackage{graphicx}
+% \usepackage{standalone}  % include pdf instead
+
+\usepackage{zhlipsum}
+\geometry{left=2.4cm,right=2.4cm,top=3cm,bottom=3cm}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+
+\titleformat{\chapter}[display]
+{\setlength{\parskip}{0pt}\Large\bfseries}{第\,\thechapter\,章}{0pt}{\Huge}
+\titlespacing*{\chapter}{20pt}{-35pt}{30pt}
+\titleformat{\section}{\Large}{\thesection}{1em}{}
+\pagenumbering{Roman}
+
+\begin{document}
+
+\title{
+    \zihao{1}测试文本 \\
+    测试文本 测试文本}
+\author{作者}
+\date{本书编译于\today}
+
+\maketitle
+
+\tableofcontents
+
+\frontmatter
+
+\mainmatter
+
+\setlength{\parskip}{0.5em}
+
+\part[测试部分1]
+     {测试部分1\\[\bigskipamount] 
+      {\normalfont \normalsize 本测试文本测试了测试文本的文本1。}}
+
+\subimport{chap01/}{chap01.tex}
+% \input{chap01}
+
+\part[测试部分2]
+     {测试部分1\\[\bigskipamount] 
+      {\normalfont \normalsize 本测试文本测试了测试文本的文本2。}}
+
+\subimport{chap02/}{chap02.tex}
+
+\setlength{\parskip}{0pt}
+
+\end{document}

@@ -1,0 +1,15 @@
+% !TEX program = latexmk
+% !TEX options = -synctex=1 -interaction=nonstopmode -file-line-error -pdf
+
+% Figure caption:
+% Template figure
+
+\documentclass[tikz]{standalone}
+\usepackage{import}
+\subimport{../../}{tikz_preamble.tex}
+
+\begin{document}
+\begin{tikzpicture}
+    \node[align=center, draw] (txt) {Sample figure 2};
+\end{tikzpicture}
+\end{document}

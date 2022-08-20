@@ -1,0 +1,99 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "make (build)",
+            "command": "make",
+            "args": [
+            ]
+        },
+        {
+            "name": "make (clean)",
+            "command": "make",
+            "args": [
+                "clean"
+            ]
+        },
+        {
+            "name": "make (clean all)",
+            "command": "make",
+            "args": [
+                "clean-all"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (for single file)",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "make (build)",
+            "tools": [
+                "make (build)"
+            ]
+        },
+        {
+            "name": "make (clean)",
+            "tools": [
+                "make (clean)"
+            ]
+        },
+        {
+            "name": "make (clean all)",
+            "tools": [
+                "make (clean all)"
+            ]
+        },
+        {
+            "name": "make (force rebuild)",
+            "tools": [
+                "make (clean all)",
+                "make (build)"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.build.forceRecipeUsage": false,
+    "latex-workshop.latex.recipe.default": "make (build)",
+    "files.associations": {
+        "*.tikz": "latex"
+    },
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false
+}
