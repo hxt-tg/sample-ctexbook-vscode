@@ -10,58 +10,13 @@
                 "-pdf",
                 "%DOC%"
             ]
-        },
-        {
-            "name": "make (build)",
-            "command": "make",
-            "args": [
-            ]
-        },
-        {
-            "name": "make (clean)",
-            "command": "make",
-            "args": [
-                "clean"
-            ]
-        },
-        {
-            "name": "make (clean all)",
-            "command": "make",
-            "args": [
-                "clean-all"
-            ]
         }
     ],
     "latex-workshop.latex.recipes": [
         {
-            "name": "latexmk (for single file)",
+            "name": "latexmk (single file)",
             "tools": [
                 "latexmk"
-            ]
-        },
-        {
-            "name": "make (build)",
-            "tools": [
-                "make (build)"
-            ]
-        },
-        {
-            "name": "make (clean)",
-            "tools": [
-                "make (clean)"
-            ]
-        },
-        {
-            "name": "make (clean all)",
-            "tools": [
-                "make (clean all)"
-            ]
-        },
-        {
-            "name": "make (force rebuild)",
-            "tools": [
-                "make (clean all)",
-                "make (build)"
             ]
         }
     ],
@@ -87,7 +42,7 @@
         "*.fdb_latexmk"
     ],
     "latex-workshop.latex.build.forceRecipeUsage": false,
-    "latex-workshop.latex.recipe.default": "make (build)",
+    "latex-workshop.latex.recipe.default": "latexmk (single file)",
     "files.associations": {
         "*.tikz": "latex"
     },
